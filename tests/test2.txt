@@ -1,0 +1,18 @@
+.section ".data"
+
+.global data
+data: 
+.word 0x1111,0x2222,0x3333
+.char 0x1111
+.align
+.word 0x4444
+.skip 10
+.long 0x55555555
+
+.equ x, 1000
+
+.section ".text"
+
+mov r1, x
+
+.end

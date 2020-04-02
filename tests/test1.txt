@@ -1,0 +1,44 @@
+
+.section ".data"
+
+.global data
+data: 
+.long 0x1234
+
+data2:
+.word 0x4321
+
+.section   ".text"
+
+
+main:
+
+mov r1, 1000
+mov r1, 0x1000
+mov r1, r2
+mov r1, data
+mov r1, data2
+
+mov data, r1
+mov data2, r1
+
+.skip 9
+
+mov r1, r1[0]
+mov r1, r1[100]
+mov r1, r1[1000]
+
+mov r1, r1[data]
+mov r1, r1[data2]
+
+mov r1[0], r1
+
+mov r1[1000], r1
+
+mov r1, *1000
+
+mov r1, &data2
+
+mov r1[1000], 1000
+
+.end

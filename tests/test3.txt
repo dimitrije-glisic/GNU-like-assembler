@@ -1,0 +1,17 @@
+
+.section ".data"
+
+.global data
+data: 
+.word 0x1111
+
+
+.section ".text"
+
+movb r1h, 0x12
+
+movb r1h, r2l
+
+pushb 0x12
+
+.end

@@ -1,0 +1,30 @@
+.section ".data"
+
+.global data
+data: 
+.word 0x1111
+data2:
+.word 0x2222
+
+.section ".text"
+
+jmp data
+
+jgt data
+
+jgt $data
+
+jmp data2
+
+jgt $data2
+
+jgt $label
+
+jmp undefined
+
+label:
+jgt $undefined
+
+
+
+.end
